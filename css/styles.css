@@ -2,11 +2,12 @@
 :root{
     --primary: #e7ad76;
     --secondary: #ecc198;
-    --title: black;
+    --title: #eb9645;
   }
 
   body {
       font-size: 15px;
+      letter-spacing: 0px;
   }
 
   /* layout styles */
@@ -16,7 +17,7 @@ nav{
   }
   nav a{
     text-transform: uppercase;
-    color: var(--title);
+    color: black;
   }
   nav a span{
     font-weight: bold;
@@ -36,14 +37,20 @@ nav{
     max-width: 400px;
 }
 
-span .card-title {
-    font-weight: bolder;
-    font-size: 1rem;
+.card-title {
+    font-size: 3rem;
     font-variant-caps: all-small-caps;
+    -webkit-text-stroke: 1px black;
+    letter-spacing: 0.1px;
+    margin: 0px;
+    line-height: 0.7;
+    font-family: 'Roboto', sans-serif;
 }
 
 .card-p {
     font-size: 1rem;
+    font-family:'Open Sans', sans-serif;
+    font-weight: 200;
 }
 
 .btn {
@@ -80,9 +87,9 @@ span .card-title {
         font-size: 0.8rem;
     }
 
-    span .card-title {
+    .card-title {
         font-weight: bolder;
-        font-size: 0.3rem;
+        font-size: 2rem;
         font-variant-caps: all-small-caps;
     }
 
