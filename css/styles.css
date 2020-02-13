@@ -1,8 +1,12 @@
 /* colours */
 :root{
-    --primary: #FFE9D2;
-    --secondary: #FFE1C4;
-    --title: #FF8816;
+    --primary: #e7ad76;
+    --secondary: #ecc198;
+    --title: black;
+  }
+
+  body {
+      font-size: 15px;
   }
 
   /* layout styles */
@@ -20,8 +24,80 @@ nav{
   nav .sidenav-trigger{
     margin: 0;
   }
-
-  li .nav-logo {
+  
+  .nav-logo {
       max-width: 200px;
       margin: 0px;
+      padding-left: 100px;
   }
+
+/* card styles*/
+.card {
+    max-width: 400px;
+}
+
+span .card-title {
+    font-weight: bolder;
+    font-size: 1rem;
+    font-variant-caps: all-small-caps;
+}
+
+.card-p {
+    font-size: 1rem;
+}
+
+.btn {
+    color: var(--title);
+}
+
+.card-content {
+    padding: 12px;
+}
+
+.cards-title {
+    font-weight: bolder;
+    padding-left: 50px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-size: x-large; 
+}
+
+.col.s4{width:33.3333333333%;margin-left:auto;left:auto;right:auto}
+
+.product-image {
+      max-width: 400px;
+      max-height: 250px;
+  }
+
+/*for mobile users*/
+  @media screen and (max-width: 700px) {
+    
+    .col.s4 {
+        width: 100%
+    }
+
+    .card-p {
+        font-size: 0.8rem;
+    }
+
+    span .card-title {
+        font-weight: bolder;
+        font-size: 0.3rem;
+        font-variant-caps: all-small-caps;
+    }
+
+    .product-image {
+        max-width: 300px;
+        max-height: 125px;
+    }
+
+    .btn {
+        width: 50%;
+        height: 5%;
+        font-size: 50%;
+        padding-left: 15px;
+        padding-right: 0px;
+        margin: 0px;
+    }
+
+}
