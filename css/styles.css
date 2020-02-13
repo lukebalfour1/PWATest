@@ -20,3 +20,8 @@ nav{
   nav .sidenav-trigger{
     margin: 0;
   }
+
+  li .nav-logo {
+      max-width: 200px;
+      margin: 0px;
+  }
