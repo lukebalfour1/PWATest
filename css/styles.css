@@ -98,6 +98,7 @@ span .card-title {
         padding-left: 15px;
         padding-right: 0px;
         margin: 0px;
+        color: var(--title);
     }
 
 }
