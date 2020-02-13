@@ -32,6 +32,10 @@ nav{
       padding-left: 100px;
   }
 
+  .page-title {
+      padding-left: 20px;
+  }
+
 /* card styles*/
 .card {
     max-width: 400px;
@@ -45,6 +49,7 @@ nav{
     margin: 0px;
     line-height: 0.7;
     font-family: 'Roboto', sans-serif;
+    /*background-color: #cccbcb;*/
 }
 
 .card-p {
@@ -66,15 +71,24 @@ nav{
     padding-left: 50px;
     padding-top: 30px;
     padding-bottom: 10px;
-    font-size: x-large; 
+    font-size: x-large;
+}
+
+.card {
+    background-color: white;
 }
 
 .col.s4{width:33.3333333333%;margin-left:auto;left:auto;right:auto}
 
+.card-image {
+    background-color: white; 
+}
 .product-image {
-      max-width: 400px;
-      max-height: 250px;
+    max-width: 400px;
+    max-height: 250px;
+    object-fit: contain;
   }
+
 
 /*for mobile users*/
   @media screen and (max-width: 700px) {
