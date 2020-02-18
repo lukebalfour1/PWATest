@@ -25,4 +25,4 @@ db.collection('products').onSnapshot((snapshot) => {
         //remove product data from web page
     }
   });
-})
+});

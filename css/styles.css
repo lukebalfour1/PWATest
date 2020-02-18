@@ -105,7 +105,7 @@ nav{
 .cart-header {
     font-weight: bold;
     font-size: 1.25em;
-    color: #333;
+    color: black;
 }
 
 .cart-column {
@@ -138,8 +138,8 @@ nav{
 
 .cart-item-title {
     color: #333;
-    margin-left: .5em;
-    font-size: 1.5em;
+    margin-left: 0.5em;
+    font-size: 1.2em;
 }
 
 .cart-item-image {
@@ -149,11 +149,12 @@ nav{
 }
 
 .btn-remove {
-    color: white;
+    color: var(--title);
     background-color: #EB5757;
     border: none;
     border-radius: .3em;
     font-weight: bold;
+    padding: 15px;
 }
 
 .btn-remove:hover {
@@ -219,16 +220,16 @@ nav{
 @media screen and (max-width: 700px) {
     
     .card-col {
-        width: 90%;
+        width: 80%;
         margin-left: 20px
     }
 
     .card-p {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .card-title {
-        font-weight: bolder;
+        font-weight: 500;
         font-size: 2rem;
         font-variant-caps: all-small-caps;
     }
@@ -239,13 +240,47 @@ nav{
     }
 
     .btn {
-        width: 50%;
+        width: 80%;
         height: 5%;
-        font-size: 50%;
+        font-size: 90%;
         padding-left: 15px;
-        padding-right: 0px;
-        margin: 0px;
+        padding-right: 10px;
+        padding-bottom: 30px;
+        margin-left: 0px;
         color: var(--title);
     }
+
+    .card-price {
+        font-size: 90%;
+    }
+
+    .cards-title {
+        font-size: 2rem;
+        padding-left: 20px;
+    }
+
+    .btn-purchase {
+        margin-left: 15px;
+        padding: 0px; 
+    }
+
+    .btn-remove {
+        color: var(--title);
+        background-color: #EB5757;
+        border: none;
+        border-radius: .3em;
+        vertical-align: middle;
+        padding: 5px;
+    }
+
+    .details-input {
+        max-width: 150px;
+    }
+
+    .cart-item-title {
+        color: #333;
+        margin-left: 0.5em;
+        font-size: 1em;
+    }    
 
 }

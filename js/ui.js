@@ -47,7 +47,6 @@ function purchaseClicked() {
   //console.log(finalCartItems[0].innerHTML)
   sessionStorage.setItem("cartcontent", finalCartItems)
   console.log(sessionStorage.getItem("cartcontent"))
-  
 }
 
 function addToCartClicked(event) {
@@ -81,7 +80,7 @@ function addItemToCart(title, price, imgSrc) {
     <span class="cart-price cart-column">£${price}</span>
     <div class="cart-quantity cart-column">
       <input class="cart-quantity-input" type="number" value="1">
-     <button class="btn btn-remove" type="button">REMOVE</button>
+     <button class="btn-remove" type="button">REMOVE</button>
     </div>
   `
   cartRow.innerHTML = cartRowContents
