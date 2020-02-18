@@ -49,26 +49,63 @@
       <i class="material-icons">help</i>Help</a>
     </li>
   </ul>
+  <!-- cart -->
+  <div>
+    <div class="col s6">
+      <div style="float: left">
+        <div class="cart-row">
+          <!-- Headings for the cart -->
+          <span class="cart-item cart-header cart-column">ITEM</span>
+          <span class="cart-price cart-header cart-column">PRICE</span>
+          <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+          <!-- items go here -->
+        </div>
+        <div class="cart-total">
+          <strong class="cart-total-title">Total</strong>
+          <span class="cart-total-price">£0</span>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col s6">
+      <div class="row">
+        <div class="col s1">
+          <p class="order-p">First Name:</p>
+        </div>
+        <div class="col s5">
+          <input class="order-input" type="text" id="fName" placeholder="e.g. Jim">
+        </div>
+        <div class="col s1">
+          <p class="order-p">Last Name:</p>
+        </div>
+        <div class="col s5">
+          <input class="order-input" type="text" id="lName" placeholder="e.g. Smith">
+        </div>
+        <div class="col s1">
+          <p class="order-p">Email:</p>
+        </div>
+        <div class="col s5">
+          <input class="order-input" type="text" id="email" placeholder="e.g. jimsmith@email.com">
+        </div>
+        <div class="col s6">
+          <a class="waves-effect waves-light btn grey lighten-2">Complete Order</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <div class="cart-row">
-    <!-- Headings for the cart -->
-    <span class="cart-item cart-header cart-column">ITEM</span>
-    <span class="cart-price cart-header cart-column">PRICE</span>
-    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-  </div>
-  <div class="cart-items">
-    <!-- items go here -->
-  </div>
-  <div class="cart-total">
-      <strong class="cart-total-title">Total</strong>
-      <span class="cart-total-price">£0</span>
-  </div>
-  <button class="btn btn-primary btn-purchase right" type="button">Purchase</button>
 
   <script>
     var cartRow = document.createElement('div')
-    cartRow.classList.add('cart-row')
-    var cartItems = sessionStorage.getItem('cartcontent')
+    var orderItems = sessionStorage.getItem('cartcontent')
+    var cartItems = document.getElementsByClassName('cart-items')[0]
+    var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
+
+    var cartRowContents = orderItems
+    cartRow.innerHTML = cartRowContents
+    cartItems.append(cartRow)
     console.log(cartItems)
   </script>
 
