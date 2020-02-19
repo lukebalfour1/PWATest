@@ -1,4 +1,5 @@
 const products = document.querySelector('.products');
+const customers = document.querySelector('.customers');
 
 //navbar slide code
 document.addEventListener('DOMContentLoaded', function () {
@@ -11,7 +12,30 @@ if (document.readyState == 'loading') {
   document.addEventListener('DOMContentLoaded', ready)
 } else {
   ready()
-}
+};
+
+//adding products to the ui using the database
+const renderProduct = (data, id) => {
+  const html =
+    `<div class="card-col" data-id="${id}">
+      <div class="card">
+        <div class="card-image">
+          <img class="product-image" src="${data.img}">
+          <span class="card-title">${data.name}</span>
+        </div>
+        <div class="card-content">
+          <p class="card-p">${data.description}</p>
+          <p class="card-price right">Price: £<span class="product-price">${data.price}</span></p>
+        </div>
+        <div class="card-action">
+          <a class="waves-effect waves-light btn grey lighten-2 shop-item-button"><i class="material-icons left">local_grocery_store</i>Add To Cart</a>
+        </div>
+      </div>
+    </div>`;
+
+  //Attaching html for the product into the html of the parent
+  products.innerHTML += html;
+};
 
 function ready() {
   //Remove Cart Products
@@ -40,26 +64,26 @@ function ready() {
 
   document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 
-}
+};
 
 function purchaseClicked() {
   var finalCartItems = document.getElementsByClassName('cart-items')[0].innerHTML
   //console.log(finalCartItems[0].innerHTML)
   sessionStorage.setItem("cartcontent", finalCartItems)
   console.log(sessionStorage.getItem("cartcontent"))
-}
+};
 
 function addToCartClicked(event) {
   var button = event.target
-  var shopItem = button.parentElement.parentElement.parentElement
+  var shopItem = button.parentElement.parentElement
   var title = shopItem.getElementsByClassName('card-title')[0].innerText
   var price = shopItem.getElementsByClassName('product-price')[0].innerText
   var imgSrc = shopItem.getElementsByClassName('product-image')[0].src
-  //console.log(title, price, imgSrc)
+  console.log(title, price, imgSrc)
   addItemToCart(title, price, imgSrc)
   updateCartTotal()
 
-}
+};
 
 function addItemToCart(title, price, imgSrc) {
   var cartRow = document.createElement('div')
@@ -88,14 +112,14 @@ function addItemToCart(title, price, imgSrc) {
   cartRow.getElementsByClassName('btn-remove')[0].addEventListener('click', removeCartItem)
   cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 
-}
+};
 
 function removeCartItem(event) {
   var buttonCicked = event.target
   //remove parent of parent element when button is clicked
   buttonCicked.parentElement.parentElement.remove()
   updateCartTotal()
-}
+};
 
 function quantityChanged(event) {
   var input = event.target
@@ -103,32 +127,6 @@ function quantityChanged(event) {
     input.value = 1
   }
   updateCartTotal()
-}
-
-//Render Product data
-const renderProduct = (data, id) => {
-  //Put html format for products in between ` `
-  //Replace details with variables | ${data.Name} | ${data.Price} | ${data.Description}
-  //Attach data-id="${id}" to div tag
-  const html =
-    `<div class="col s4">
-  <div class="card">
-    <div class="card-image">
-      <img class="product-image" src="/img/tankard.png">
-      <span class="card-title">${data.Name}</span>
-    </div>
-    <div class="card-content">
-      <p class="card-p">${data.Description}</p>
-      <p class="card-price right">Price: £<span class="product-price">${data.Price}</span></p>
-    </div>
-    <div class="card-action">
-      <a class="waves-effect waves-light btn grey lighten-2 shop-item-button"><i class="material-icons left">local_grocery_store</i>Add To Cart</a>
-    </div>
-  </div>
-</div>`;
-
-  //Attaching html for the product into the html of the parent
- // products.innerHTML += html;
 };
 
 //Remove Cart Products
@@ -146,7 +144,7 @@ for (var i = 0; i < removeCartItemButtons.length; i++) {
     buttonCicked.parentElement.parentElement.remove()
     updateCartTotal()
   })
-}
+};
 
 //Update cart total when items are changed
 function updateCartTotal() {
@@ -171,4 +169,4 @@ function updateCartTotal() {
   total = Math.round(total * 100) / 100
   document.getElementsByClassName('cart-total-price')[0].innerText = '£' + total
 
-}
+};

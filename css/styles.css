@@ -85,10 +85,11 @@ nav{
 
 .card-col{
     float: left;
-    width:32%;
-    margin-left: 10px;
+    width:33.33333%;
+    margin-left: 0px;
     left: auto;
     right: 0px;
+    height: 500px;
 }
 
 .card-image {
@@ -216,12 +217,19 @@ nav{
     float: right;
 }
 
+.btn-complete {
+    margin-top: 0px;
+    margin-right: 150px;
+}
+
 /*for mobile users*/
 @media screen and (max-width: 700px) {
     
     .card-col {
-        width: 80%;
-        margin-left: 20px
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        height: auto;
     }
 
     .card-p {
@@ -281,6 +289,11 @@ nav{
         color: #333;
         margin-left: 0.5em;
         font-size: 1em;
-    }    
+    }
+
+    .btn-complete {
+        margin-top: 0px;
+        margin-right: 0px;
+    }
 
 }

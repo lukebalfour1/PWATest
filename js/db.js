@@ -26,3 +26,22 @@ db.collection('products').onSnapshot((snapshot) => {
     }
   });
 });
+
+//adding customer details to database
+const form = document.querySelector('form');
+form.addEventListener('submit', evt => {
+    evt.preventDefault();
+
+    const customer = {
+        fname: form.fName.value,
+        lname: form.lName.value,
+        email: form.email.value
+    };
+
+    db.collection('customers').add(customer)
+    .catch(err => console.log(err));
+
+    form.fName.value = "";
+    form.lName.value = "";
+    form.email.value = "";
+})

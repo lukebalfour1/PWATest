@@ -1,5 +1,5 @@
-/*const staticCacheName = "site-static-v3";
-const dynamicCacheName = "site-dynamic-v3";
+const staticCacheName = "site-static-v8";
+const dynamicCacheName = "site-dynamic-v8";
 const assets = [
     '/',
     '/index.html',
@@ -10,7 +10,8 @@ const assets = [
     '/css/materialize.min.css',
     'https://fonts.googleapis.com/icon?family=Material+Icons',
     'https://fonts.gstatic.com/s/materialicons/v48/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2',
-    '/pages/fallback.html'
+    '/pages/fallback.html',
+    '/pages/order.html'
 ];
 
 //cache size limit function
@@ -27,10 +28,8 @@ const limitCacheSize = (name, size) => {
 self.addEventListener("install", evt =>
 {
     //console.log("Service worker has been installed");
-    evt.waitUntil
-    (
-    caches.open(staticCacheName).then(cache =>
-        {
+    evt.waitUntil(
+    caches.open(staticCacheName).then(cache => {
             console.log("Caching shell assets");
             cache.addAll(assets);
         })
@@ -71,4 +70,4 @@ self.addEventListener("fetch", evt =>
             })
     );
     }
-});*/
+});
