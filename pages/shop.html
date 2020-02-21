@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +21,7 @@
   <!--font-->
   <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab|Open+Sans&display=swap" rel="stylesheet">
 </head>
+
 <body class="grey lighten-4">
   <!-- top nav -->
   <nav class="z-depth-0">
@@ -34,27 +36,30 @@
   <!-- side nav -->
   <ul id="side-menu" class="sidenav side-menu grey lighten-4">
     <li><img class="nav-logo" src="/img/cuttingedgelogo.png"></li>
-    <li><a href="/pages/aboutus.html" class="waves-effect">
-      <i class="material-icons">info</i>About Us</a>
+    <li><a href="/index.html" class="waves-effect">
+        <i class="material-icons">home</i>Home</a>
     </li>
     <li><a href="/pages/contact.html" class="waves-effect">
-      <i class="material-icons">mail</i>Contact</a>
+        <i class="material-icons">mail</i>Contact</a>
     </li>
     <li><a href="/pages/help.html" class="waves-effect">
-      <i class="material-icons">help</i>Help</a>
+        <i class="material-icons">help</i>Help</a>
     </li>
     <li class="divider"></li>
-    <li><a href="/index.html" class="waves-effect logged-in">
-      <i class="material-icons">home</i>Home</a>
+    <li><a href="/pages/shop.html" class="waves-effect logged-in">
+        <i class="material-icons">local_grocery_store</i>Shop</a>
     </li>
     <li><a href="/pages/order.html" class="waves-effect logged-in">
-      <i class="material-icons">local_grocery_store</i>Order</a>
+        <i class="material-icons">account_balance_wallet</i>Order</a>
     </li>
-    <li><a href="/pages/order.html" class="waves-effect logged-out">
-      <i class="material-icons">person</i>Login</a>
+    <li><a class="waves-effect logged-in">
+        <i class="material-icons">keyboard_return</i>Logout</a>
     </li>
-    <li><a href="/pages/order.html" class="waves-effect logged-out">
-      <i class="material-icons">create</i>Sign Up</a>
+    <li><a href="/pages/login.html" class="waves-effect logged-out">
+        <i class="material-icons">person</i>Login</a>
+    </li>
+    <li><a href="/pages/signup.html" class="waves-effect logged-out">
+        <i class="material-icons">create</i>Sign Up</a>
     </li>
   </ul>
 
@@ -74,41 +79,43 @@
     <!-- items go here -->
   </div>
   <div class="cart-total">
-      <strong class="cart-total-title">Total</strong>
-      <span class="cart-total-price">£0</span>
+    <strong class="cart-total-title">Total</strong>
+    <span class="cart-total-price">£0</span>
   </div>
-  <a href="/pages/order.html" class="btn btn-primary btn-purchase left waves-effect waves-light btn grey lighten-2" type="button">Order</a>
+  <a href="/pages/order.html" class="btn btn-primary btn-purchase left waves-effect waves-light btn grey lighten-2"
+    type="button">Order</a>
   <p>
-  </br>
-  </br>
+    </br>
+    </br>
   </p>
 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCCR3I7U8iYVIi97XBWGTU25PRaeHTX82s",
-    authDomain: "cuttingedgetest-45c65.firebaseapp.com",
-    databaseURL: "https://cuttingedgetest-45c65.firebaseio.com",
-    projectId: "cuttingedgetest-45c65",
-    storageBucket: "cuttingedgetest-45c65.appspot.com",
-    messagingSenderId: "385867913724",
-    appId: "1:385867913724:web:e926a8ab6f0a6babb07a79",
-    measurementId: "G-DN4G37GJ3E"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-  const db = firebase.firestore();
-</script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCCR3I7U8iYVIi97XBWGTU25PRaeHTX82s",
+      authDomain: "cuttingedgetest-45c65.firebaseapp.com",
+      databaseURL: "https://cuttingedgetest-45c65.firebaseio.com",
+      projectId: "cuttingedgetest-45c65",
+      storageBucket: "cuttingedgetest-45c65.appspot.com",
+      messagingSenderId: "385867913724",
+      appId: "1:385867913724:web:e926a8ab6f0a6babb07a79",
+      measurementId: "G-DN4G37GJ3E"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const db = firebase.firestore();
+  </script>
 
   <script src="/js/ui.js"></script>
   <script src="/js/db.js"></script>
   <script src="/js/app.js"></script>
 </body>
+
 </html>

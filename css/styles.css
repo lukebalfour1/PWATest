@@ -222,6 +222,13 @@ nav{
     margin-right: 150px;
 }
 
+/* sign up style */
+
+.form-field {
+    margin-left: 20px;
+    width: auto; 
+}
+
 /*for mobile users*/
 @media screen and (max-width: 700px) {
     
